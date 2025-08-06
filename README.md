@@ -113,4 +113,12 @@ sudo sed -i "s/database_name_here/wordpress_db/; s/username_here/wpuser/; s/pass
 
 # Restart Web Server
 sudo systemctl restart apache2
-Verify siteOpen http://<EC2_PUBLIC_IP> in your browser and complete the setup wizard.Day 5: Backup & CleanupStep 5.1: Create an AMI Backup (AWS Console)Navigate to EC2 → Instances, select your instance.Click Actions → Image → Create Image.Name: wordpress-backup-day5, click Create Image.Confirm in EC2 → AMIs that the image becomes available.Step 5.2: Take an EBS Snapshot (AWS Console)Go to Elastic Block Store → Volumes, select your volume.Click Actions → Create Snapshot, name wp-volume-snapshot-day5, click Create Snapshot.Confirm in Snapshots that it’s completed.
+Verify siteOpen http://<EC2_PUBLIC_IP> in your browser and complete the setup wizard.
+
+Day 5: Backup & Cleanup
+
+Step 5.1: Create an AMI Backup (AWS Console)
+Navigate to EC2 → Instances, select your instance.Click Actions → Image → Create Image.Name: wordpress-backup-day5, click Create Image.Confirm in EC2 → AMIs that the image becomes available.
+
+Step 5.2: Take an EBS Snapshot (AWS Console)
+Go to Elastic Block Store → Volumes, select your volume.Click Actions → Create Snapshot, name wp-volume-snapshot-day5, click Create Snapshot.Confirm in Snapshots that it’s completed.
